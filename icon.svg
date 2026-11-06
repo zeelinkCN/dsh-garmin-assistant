@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Garmin Panel">
+  <defs>
+    <clipPath id="gp-round">
+      <rect x="0" y="0" width="64" height="64" rx="14"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#gp-round)">
+    <!-- 深灰底 -->
+    <rect width="64" height="64" fill="#3b3b3b"/>
+    <!-- 斜切蓝色块：左上到底边 y≈27，右边缘 y≈7.4 -->
+    <path d="M0 0H64V7.4L0 27.2Z" fill="#4ea8e8"/>
+    <!-- 倾斜的 GARMIN 字标（-17°，横向略拉宽以贴近官方字形） -->
+    <g transform="translate(0 24.44) rotate(-17) scale(1.25 1)">
+      <text x="5.65" y="0" font-family="Helvetica,Arial,sans-serif" font-size="8.3" font-weight="800"
+            letter-spacing="0.6" fill="#3b3b3b">GARMIN</text>
+      <text x="42.41" y="0.8" font-family="Helvetica,Arial,sans-serif" font-size="1.7"
+            font-weight="700" fill="#3b3b3b">®</text>
+    </g>
+    <!-- 蓝色 C：圆环 + 左侧细平口 + 右侧开口 -->
+    <circle cx="31.9" cy="41" r="14.6" fill="none" stroke="#4ea8e8" stroke-width="5.2"/>
+    <rect x="13" y="39.15" width="7.6" height="3.9" fill="#3b3b3b"/>
+    <rect x="43" y="35.5" width="21" height="11.25" fill="#3b3b3b"/>
+  </g>
+</svg>

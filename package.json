@@ -1,0 +1,52 @@
+{
+  "name": "dsh-garmin-assistant",
+  "version": "1.5.1",
+  "private": false,
+  "type": "module",
+  "description": "Garmin Assistant (佳明助手) — DeepSeek Harness desktop plugin: official Garmin Personal API dashboard, sleep/HRV, activity tiles with offline tracks, monthly heatmap, AI coach / health steward / nutrition, account settings, card-level personalization.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "scripts": {
+    "build:client": "node scripts/build-client.mjs"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "src",
+    "scripts",
+    "host"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeelinkCN/dsh-garmin-assistant.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "garmin",
+    "health",
+    "fitness"
+  ]
+}
